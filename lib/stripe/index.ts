@@ -1,12 +1,7 @@
-// Environment Variables (Stripe API Key)
-import { config } from "dotenv"
-if (process.env.NODE_ENV !== 'production') {
-  config();
-}
-
 // Initialize Stripe
-import Stripe from 'stripe';
-export const stripe = new Stripe(
+import { loadStripe } from '@stripe/stripe-js';
+
+export const stripe = loadStripe(
   process.env.STRIPE_SECRET ?? "",
   {
     apiVersion: '2020-08-27',
