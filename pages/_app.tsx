@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import Layout from '../components/layout'
 import { AppProps } from 'next/app'
 import { Elements } from '@stripe/react-stripe-js'
-import { stripe } from '../lib/stripe'
+import { stripe } from '../lib/stripe/client'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Layout>
